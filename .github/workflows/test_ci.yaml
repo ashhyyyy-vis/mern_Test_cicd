@@ -13,7 +13,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: install dependencies
-        run: npm install
-      - name: run tests
+      - name: install client dependencies
+        working-directory: client
+        run: npm install  
+      - name: run client tests
+        working-directory: client
         run: npm test
+      - name: install server dependencies
+        working-directory: server
+        run: npm install
+      - name: run server tests
+        working-directory: server
+        run: npm test
+      
