@@ -1,7 +1,8 @@
 name: Ci
 
 on:
-  workflow_dispatch
+  push:
+    branches: [main]
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
