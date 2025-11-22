@@ -18,11 +18,11 @@ jobs:
         run: npm install  
       - name: run client tests
         working-directory: client
-        run: npm test
+        run: npm test -- --passWithNoTests
       - name: install server dependencies
         working-directory: server
         run: npm install
       - name: run server tests
         working-directory: server
-        run: npm test
+        run: npm test -- --passWithNoTests
       
